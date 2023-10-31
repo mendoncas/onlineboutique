@@ -117,6 +117,23 @@ func (fe *Server) homeHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func (fe *Server) getImageHandler(w http.ResponseWriter, r *http.Request) {
+  _, productID := filepath.Split(r.URL.Path)
+	logger := r.Context().Value(ctxKeyLogger{}).(*slog.Logger)
+  logger.Debug("Buscando produto" + productID)
+
+  image, err := fe.imageservice.Get().GetProductImage(r.Context(), productID)
+
+  if err != nil {
+    logger.Error("erro ao buscar imagem do produto!")
+    w.WriteHeader(404)
+  }
+
+  w.Header().Add("Content-Type", "image/png")
+  w.WriteHeader(200)
+  w.Write(image)
+}
+
 func (fe *Server) productHandler(w http.ResponseWriter, r *http.Request) {
 	_, id := filepath.Split(r.URL.Path)
 	logger := r.Context().Value(ctxKeyLogger{}).(*slog.Logger)
@@ -389,6 +406,7 @@ func (fe *Server) logoutHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Location", "/")
 	w.WriteHeader(http.StatusFound)
 }
+
 
 func (fe *Server) setCurrencyHandler(w http.ResponseWriter, r *http.Request) {
 	logger := r.Context().Value(ctxKeyLogger{}).(*slog.Logger)

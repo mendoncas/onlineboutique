@@ -1,0 +1,15 @@
+Method,Name,Error,Occurrences
+GET,//localhost:12345/product/9SIQT8TOJO,"gaierror(-3, 'Temporary failure in name resolution')",6
+GET,//localhost:12345/product/LS4PSXUNUM,"gaierror(-3, 'Temporary failure in name resolution')",12
+GET,//localhost:12345/product/L9ECAV7KIM,"gaierror(-3, 'Temporary failure in name resolution')",7
+POST,//localhost:12345/cart/checkout,"gaierror(-3, 'Temporary failure in name resolution')",8
+POST,//localhost:12345/cart,"gaierror(-3, 'Temporary failure in name resolution')",20
+POST,//localhost:12345/setCurrency,"gaierror(-3, 'Temporary failure in name resolution')",4
+GET,//localhost:12345/product/66VCHSJNUP,"gaierror(-3, 'Temporary failure in name resolution')",6
+GET,//localhost:12345/product/1YMWWN1N4O,"gaierror(-3, 'Temporary failure in name resolution')",6
+GET,//localhost:12345/product/2ZYFJ3GM2N,"gaierror(-3, 'Temporary failure in name resolution')",11
+GET,//localhost:12345/,"gaierror(-3, 'Temporary failure in name resolution')",32
+GET,//localhost:12345/cart,"gaierror(-3, 'Temporary failure in name resolution')",20
+GET,//localhost:12345/product/6E92ZMYYFZ,"gaierror(-3, 'Temporary failure in name resolution')",6
+GET,//localhost:12345/product/OLJCESPC7Z,"gaierror(-3, 'Temporary failure in name resolution')",14
+GET,//localhost:12345/product/0PUK6V6EV0,"gaierror(-3, 'Temporary failure in name resolution')",3

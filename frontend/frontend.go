@@ -25,14 +25,15 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ServiceWeaver/weaver"
 	"github.com/ServiceWeaver/onlineboutique/adservice"
 	"github.com/ServiceWeaver/onlineboutique/cartservice"
 	"github.com/ServiceWeaver/onlineboutique/checkoutservice"
 	"github.com/ServiceWeaver/onlineboutique/currencyservice"
+	"github.com/ServiceWeaver/onlineboutique/imageservice"
 	"github.com/ServiceWeaver/onlineboutique/productcatalogservice"
 	"github.com/ServiceWeaver/onlineboutique/recommendationservice"
 	"github.com/ServiceWeaver/onlineboutique/shippingservice"
+	"github.com/ServiceWeaver/weaver"
 )
 
 const (
@@ -73,6 +74,7 @@ type Server struct {
 	platform platformDetails
 	hostname string
 
+  imageservice          weaver.Ref[imageservice.T]
 	catalogService        weaver.Ref[productcatalogservice.T]
 	currencyService       weaver.Ref[currencyservice.T]
 	cartService           weaver.Ref[cartservice.T]
@@ -137,6 +139,7 @@ func Serve(ctx context.Context, s *Server) error {
 	const post = http.MethodPost
 	const head = http.MethodHead
 	r.Handle("/", instrument("home", s.homeHandler, []string{get, head}))
+  r.Handle("/image/", instrument("image", s.getImageHandler, []string{get}))
 	r.Handle("/product/", instrument("product", s.productHandler, []string{get, head}))
 	r.Handle("/cart", instrument("cart", s.cartHandler, []string{get, head, post}))
 	r.Handle("/cart/empty", instrument("cart_empty", s.emptyCartHandler, []string{post}))

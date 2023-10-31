@@ -1,0 +1,6 @@
+user_count = 10000
+user_spawn = 90
+memory = "10g"
+cpus = "4"
+run_time = "180s"
+
