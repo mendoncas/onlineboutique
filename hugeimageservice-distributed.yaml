@@ -34,19 +34,19 @@ subjects:
 
 ---
 
-# Deployment for replica set github.com/ServiceWeaver/onlineboutique/cartservice/cartCache
+# Deployment for replica set github.com/ServiceWeaver/onlineboutique/paymentservice/T
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: onlineboutique-boutique-cartservice-cartcache-e2196232-2e220ccf
+  name: onlineboutique-nlineboutique-paymentservice-t-a696bf07-a239739f
   namespace: default
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      depName: onlineboutique-boutique-cartservice-cartcache-e2196232-2e220ccf
+      depName: onlineboutique-nlineboutique-paymentservice-t-a696bf07-a239739f
   strategy:
     rollingUpdate: {}
     type: RollingUpdate
@@ -55,7 +55,7 @@ spec:
       creationTimestamp: null
       labels:
         appName: onlineboutique
-        depName: onlineboutique-boutique-cartservice-cartcache-e2196232-2e220ccf
+        depName: onlineboutique-nlineboutique-paymentservice-t-a696bf07-a239739f
         metrics: onlineboutique
       namespace: default
     spec:
@@ -64,8 +64,81 @@ spec:
         - babysitter
         env:
         - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSPWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jYXJ0c2VydmljZS9jYXJ0Q2FjaGUaQQo9Z2l0aHViLmNvbS9TZXJ2aWNlV2VhdmVyL29ubGluZWJvdXRpcXVlL2NhcnRzZXJ2aWNlL2NhcnRDYWNoZRIAIJBOKgdkZWZhdWx0MjZodHRwOi8vb25saW5lYm91dGlxdWUtamFlZ2VyLTI4OGJjYTM5OjE0MjY4L2FwaS90cmFjZXM=
-        image: ricardocgm/weaver-onlineboutique:e2196232
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgo6aQoEa3ViZRJhaW1hZ2UgPSAicmljYXJkb2NnbS93ZWF2ZXItb25saW5lYm91dGlxdWUiCgpbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBwdWJsaWMgPSB0cnVlCjpNCgZzaW5nbGUSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1Igo6TAoFbXVsdGkSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1IgoSOGdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9wYXltZW50c2VydmljZS9UGjwKOGdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9wYXltZW50c2VydmljZS9UEgAgkE4qB2RlZmF1bHQyNmh0dHA6Ly9vbmxpbmVib3V0aXF1ZS1qYWVnZXItMjg4YmNhMzk6MTQyNjgvYXBpL3RyYWNlcw==
+        image: ricardocgm/weaver-onlineboutique:a696bf07
+        imagePullPolicy: IfNotPresent
+        name: serviceweaver
+        ports:
+        - containerPort: 9090
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        stdin: true
+        tty: true
+status: {}
+
+---
+
+# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/paymentservice/T
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  creationTimestamp: null
+  name: onlineboutique-hpa-tique-paymentservice-t-a696bf07-f5b784fb
+  namespace: default
+spec:
+  maxReplicas: 10
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: onlineboutique-nlineboutique-paymentservice-t-a696bf07-a239739f
+status:
+  currentMetrics: null
+  desiredReplicas: 0
+
+---
+
+# Deployment for replica set github.com/ServiceWeaver/onlineboutique/cartservice/cartCache
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: onlineboutique-boutique-cartservice-cartcache-a696bf07-c84bcfc1
+  namespace: default
+spec:
+  minReadySeconds: 5
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      depName: onlineboutique-boutique-cartservice-cartcache-a696bf07-c84bcfc1
+  strategy:
+    rollingUpdate: {}
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        appName: onlineboutique
+        depName: onlineboutique-boutique-cartservice-cartcache-a696bf07-c84bcfc1
+        metrics: onlineboutique
+      namespace: default
+    spec:
+      containers:
+      - args:
+        - babysitter
+        env:
+        - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSPWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jYXJ0c2VydmljZS9jYXJ0Q2FjaGUaQQo9Z2l0aHViLmNvbS9TZXJ2aWNlV2VhdmVyL29ubGluZWJvdXRpcXVlL2NhcnRzZXJ2aWNlL2NhcnRDYWNoZRIAIJBOKgdkZWZhdWx0MjZodHRwOi8vb25saW5lYm91dGlxdWUtamFlZ2VyLTI4OGJjYTM5OjE0MjY4L2FwaS90cmFjZXM=
+        image: ricardocgm/weaver-onlineboutique:a696bf07
         imagePullPolicy: IfNotPresent
         name: serviceweaver
         ports:
@@ -85,7 +158,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: onlineboutique-hpa-cartservice-cartcache-e2196232-30b42962
+  name: onlineboutique-hpa-cartservice-cartcache-a696bf07-9aa6427b
   namespace: default
 spec:
   maxReplicas: 10
@@ -100,26 +173,26 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: onlineboutique-boutique-cartservice-cartcache-e2196232-2e220ccf
+    name: onlineboutique-boutique-cartservice-cartcache-a696bf07-c84bcfc1
 status:
   currentMetrics: null
   desiredReplicas: 0
 
 ---
 
-# Deployment for replica set github.com/ServiceWeaver/onlineboutique/checkoutservice/T
+# Deployment for replica set github.com/ServiceWeaver/onlineboutique/cartservice/T
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: onlineboutique-lineboutique-checkoutservice-t-e2196232-df7fbbca
+  name: onlineboutique-r-onlineboutique-cartservice-t-a696bf07-34109de7
   namespace: default
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      depName: onlineboutique-lineboutique-checkoutservice-t-e2196232-df7fbbca
+      depName: onlineboutique-r-onlineboutique-cartservice-t-a696bf07-34109de7
   strategy:
     rollingUpdate: {}
     type: RollingUpdate
@@ -128,7 +201,7 @@ spec:
       creationTimestamp: null
       labels:
         appName: onlineboutique
-        depName: onlineboutique-lineboutique-checkoutservice-t-e2196232-df7fbbca
+        depName: onlineboutique-r-onlineboutique-cartservice-t-a696bf07-34109de7
         metrics: onlineboutique
       namespace: default
     spec:
@@ -137,8 +210,8 @@ spec:
         - babysitter
         env:
         - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSOWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jaGVja291dHNlcnZpY2UvVBo9CjlnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvY2hlY2tvdXRzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
-        image: ricardocgm/weaver-onlineboutique:e2196232
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDo8Cg1zZXJ2aWNld2VhdmVyEitiaW5hcnkgPSAiLi9vbmxpbmVib3V0aXF1ZSIKcm9sbG91dCA9ICI1bSIKOmkKBGt1YmUSYWltYWdlID0gInJpY2FyZG9jZ20vd2VhdmVyLW9ubGluZWJvdXRpcXVlIgoKW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgcHVibGljID0gdHJ1ZQo6TQoGc2luZ2xlEkNbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBhZGRyZXNzID0gImxvY2FsaG9zdDoxMjM0NSIKOkwKBW11bHRpEkNbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBhZGRyZXNzID0gImxvY2FsaG9zdDoxMjM0NSIKOnUKA2drZRJucmVnaW9ucyA9IFsidXMtd2VzdDEiXQoKW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgcHVibGljX2hvc3RuYW1lID0gIm9ubGluZWJvdXRpcXVlLmV4YW1wbGUuY29tIgoSNWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jYXJ0c2VydmljZS9UGjkKNWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jYXJ0c2VydmljZS9UEgAgkE4qB2RlZmF1bHQyNmh0dHA6Ly9vbmxpbmVib3V0aXF1ZS1qYWVnZXItMjg4YmNhMzk6MTQyNjgvYXBpL3RyYWNlcw==
+        image: ricardocgm/weaver-onlineboutique:a696bf07
         imagePullPolicy: IfNotPresent
         name: serviceweaver
         ports:
@@ -153,12 +226,12 @@ status: {}
 
 ---
 
-# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/checkoutservice/T
+# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/cartservice/T
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: onlineboutique-hpa-ique-checkoutservice-t-e2196232-53a7e9f0
+  name: onlineboutique-hpa-boutique-cartservice-t-a696bf07-5a6615a1
   namespace: default
 spec:
   maxReplicas: 10
@@ -173,80 +246,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: onlineboutique-lineboutique-checkoutservice-t-e2196232-df7fbbca
-status:
-  currentMetrics: null
-  desiredReplicas: 0
-
----
-
-# Deployment for replica set github.com/ServiceWeaver/onlineboutique/emailservice/T
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  creationTimestamp: null
-  name: onlineboutique-onlineboutique-emailservice-t-e2196232-7fd0f74f
-  namespace: default
-spec:
-  minReadySeconds: 5
-  revisionHistoryLimit: 1
-  selector:
-    matchLabels:
-      depName: onlineboutique-onlineboutique-emailservice-t-e2196232-7fd0f74f
-  strategy:
-    rollingUpdate: {}
-    type: RollingUpdate
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        appName: onlineboutique
-        depName: onlineboutique-onlineboutique-emailservice-t-e2196232-7fd0f74f
-        metrics: onlineboutique
-      namespace: default
-    spec:
-      containers:
-      - args:
-        - babysitter
-        env:
-        - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSNmdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9lbWFpbHNlcnZpY2UvVBo6CjZnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvZW1haWxzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
-        image: ricardocgm/weaver-onlineboutique:e2196232
-        imagePullPolicy: IfNotPresent
-        name: serviceweaver
-        ports:
-        - containerPort: 9090
-        resources:
-          requests:
-            cpu: 100m
-            memory: 128Mi
-        stdin: true
-        tty: true
-status: {}
-
----
-
-# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/emailservice/T
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
-metadata:
-  creationTimestamp: null
-  name: onlineboutique-hpa-outique-emailservice-t-e2196232-5570e756
-  namespace: default
-spec:
-  maxReplicas: 10
-  metrics:
-  - resource:
-      name: cpu
-      target:
-        averageUtilization: 80
-        type: Utilization
-    type: Resource
-  minReplicas: 1
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: onlineboutique-onlineboutique-emailservice-t-e2196232-7fd0f74f
+    name: onlineboutique-r-onlineboutique-cartservice-t-a696bf07-34109de7
 status:
   currentMetrics: null
   desiredReplicas: 0
@@ -258,14 +258,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: onlineboutique-utique-recommendationservice-t-e2196232-f4139bf4
+  name: onlineboutique-utique-recommendationservice-t-a696bf07-951f1e30
   namespace: default
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      depName: onlineboutique-utique-recommendationservice-t-e2196232-f4139bf4
+      depName: onlineboutique-utique-recommendationservice-t-a696bf07-951f1e30
   strategy:
     rollingUpdate: {}
     type: RollingUpdate
@@ -274,7 +274,7 @@ spec:
       creationTimestamp: null
       labels:
         appName: onlineboutique
-        depName: onlineboutique-utique-recommendationservice-t-e2196232-f4139bf4
+        depName: onlineboutique-utique-recommendationservice-t-a696bf07-951f1e30
         metrics: onlineboutique
       namespace: default
     spec:
@@ -283,8 +283,8 @@ spec:
         - babysitter
         env:
         - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSP2dpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9yZWNvbW1lbmRhdGlvbnNlcnZpY2UvVBpDCj9naXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvcmVjb21tZW5kYXRpb25zZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
-        image: ricardocgm/weaver-onlineboutique:e2196232
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgo6aQoEa3ViZRJhaW1hZ2UgPSAicmljYXJkb2NnbS93ZWF2ZXItb25saW5lYm91dGlxdWUiCgpbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBwdWJsaWMgPSB0cnVlCjpNCgZzaW5nbGUSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1Igo6TAoFbXVsdGkSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1IgoSP2dpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9yZWNvbW1lbmRhdGlvbnNlcnZpY2UvVBpDCj9naXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvcmVjb21tZW5kYXRpb25zZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
+        image: ricardocgm/weaver-onlineboutique:a696bf07
         imagePullPolicy: IfNotPresent
         name: serviceweaver
         ports:
@@ -304,7 +304,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: onlineboutique-hpa-ecommendationservice-t-e2196232-baad1337
+  name: onlineboutique-hpa-ecommendationservice-t-a696bf07-8810f3f5
   namespace: default
 spec:
   maxReplicas: 10
@@ -319,7 +319,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: onlineboutique-utique-recommendationservice-t-e2196232-f4139bf4
+    name: onlineboutique-utique-recommendationservice-t-a696bf07-951f1e30
 status:
   currentMetrics: null
   desiredReplicas: 0
@@ -331,14 +331,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: onlineboutique-onlineboutique-imageservice-t-e2196232-89074125
+  name: onlineboutique-onlineboutique-imageservice-t-a696bf07-f79ec336
   namespace: default
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      depName: onlineboutique-onlineboutique-imageservice-t-e2196232-89074125
+      depName: onlineboutique-onlineboutique-imageservice-t-a696bf07-f79ec336
   strategy:
     rollingUpdate: {}
     type: RollingUpdate
@@ -347,7 +347,7 @@ spec:
       creationTimestamp: null
       labels:
         appName: onlineboutique
-        depName: onlineboutique-onlineboutique-imageservice-t-e2196232-89074125
+        depName: onlineboutique-onlineboutique-imageservice-t-a696bf07-f79ec336
         metrics: onlineboutique
       namespace: default
     spec:
@@ -356,8 +356,8 @@ spec:
         - babysitter
         env:
         - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSNmdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9pbWFnZXNlcnZpY2UvVBo6CjZnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvaW1hZ2VzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
-        image: ricardocgm/weaver-onlineboutique:e2196232
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDo8Cg1zZXJ2aWNld2VhdmVyEitiaW5hcnkgPSAiLi9vbmxpbmVib3V0aXF1ZSIKcm9sbG91dCA9ICI1bSIKOmkKBGt1YmUSYWltYWdlID0gInJpY2FyZG9jZ20vd2VhdmVyLW9ubGluZWJvdXRpcXVlIgoKW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgcHVibGljID0gdHJ1ZQo6TQoGc2luZ2xlEkNbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBhZGRyZXNzID0gImxvY2FsaG9zdDoxMjM0NSIKOkwKBW11bHRpEkNbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBhZGRyZXNzID0gImxvY2FsaG9zdDoxMjM0NSIKOnUKA2drZRJucmVnaW9ucyA9IFsidXMtd2VzdDEiXQoKW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgcHVibGljX2hvc3RuYW1lID0gIm9ubGluZWJvdXRpcXVlLmV4YW1wbGUuY29tIgoSNmdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9pbWFnZXNlcnZpY2UvVBo6CjZnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvaW1hZ2VzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
+        image: ricardocgm/weaver-onlineboutique:a696bf07
         imagePullPolicy: IfNotPresent
         name: serviceweaver
         ports:
@@ -377,7 +377,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: onlineboutique-hpa-outique-imageservice-t-e2196232-6a0a0769
+  name: onlineboutique-hpa-outique-imageservice-t-a696bf07-b27ef2df
   namespace: default
 spec:
   maxReplicas: 10
@@ -392,7 +392,80 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: onlineboutique-onlineboutique-imageservice-t-e2196232-89074125
+    name: onlineboutique-onlineboutique-imageservice-t-a696bf07-f79ec336
+status:
+  currentMetrics: null
+  desiredReplicas: 0
+
+---
+
+# Deployment for replica set github.com/ServiceWeaver/onlineboutique/emailservice/T
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: onlineboutique-onlineboutique-emailservice-t-a696bf07-1ff98b30
+  namespace: default
+spec:
+  minReadySeconds: 5
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      depName: onlineboutique-onlineboutique-emailservice-t-a696bf07-1ff98b30
+  strategy:
+    rollingUpdate: {}
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        appName: onlineboutique
+        depName: onlineboutique-onlineboutique-emailservice-t-a696bf07-1ff98b30
+        metrics: onlineboutique
+      namespace: default
+    spec:
+      containers:
+      - args:
+        - babysitter
+        env:
+        - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSNmdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9lbWFpbHNlcnZpY2UvVBo6CjZnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvZW1haWxzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
+        image: ricardocgm/weaver-onlineboutique:a696bf07
+        imagePullPolicy: IfNotPresent
+        name: serviceweaver
+        ports:
+        - containerPort: 9090
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        stdin: true
+        tty: true
+status: {}
+
+---
+
+# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/emailservice/T
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  creationTimestamp: null
+  name: onlineboutique-hpa-outique-emailservice-t-a696bf07-65ae06a9
+  namespace: default
+spec:
+  maxReplicas: 10
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: onlineboutique-onlineboutique-emailservice-t-a696bf07-1ff98b30
 status:
   currentMetrics: null
   desiredReplicas: 0
@@ -404,14 +477,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: onlineboutique-lineboutique-currencyservice-t-e2196232-d96f0ffd
+  name: onlineboutique-lineboutique-currencyservice-t-a696bf07-b72d3c0a
   namespace: default
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      depName: onlineboutique-lineboutique-currencyservice-t-e2196232-d96f0ffd
+      depName: onlineboutique-lineboutique-currencyservice-t-a696bf07-b72d3c0a
   strategy:
     rollingUpdate: {}
     type: RollingUpdate
@@ -420,7 +493,7 @@ spec:
       creationTimestamp: null
       labels:
         appName: onlineboutique
-        depName: onlineboutique-lineboutique-currencyservice-t-e2196232-d96f0ffd
+        depName: onlineboutique-lineboutique-currencyservice-t-a696bf07-b72d3c0a
         metrics: onlineboutique
       namespace: default
     spec:
@@ -429,8 +502,8 @@ spec:
         - babysitter
         env:
         - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgo6aQoEa3ViZRJhaW1hZ2UgPSAicmljYXJkb2NnbS93ZWF2ZXItb25saW5lYm91dGlxdWUiCgpbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBwdWJsaWMgPSB0cnVlCjpNCgZzaW5nbGUSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1Igo6TAoFbXVsdGkSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1IgoSOWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jdXJyZW5jeXNlcnZpY2UvVBo9CjlnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvY3VycmVuY3lzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
-        image: ricardocgm/weaver-onlineboutique:e2196232
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDo8Cg1zZXJ2aWNld2VhdmVyEitiaW5hcnkgPSAiLi9vbmxpbmVib3V0aXF1ZSIKcm9sbG91dCA9ICI1bSIKOmkKBGt1YmUSYWltYWdlID0gInJpY2FyZG9jZ20vd2VhdmVyLW9ubGluZWJvdXRpcXVlIgoKW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgcHVibGljID0gdHJ1ZQo6TQoGc2luZ2xlEkNbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBhZGRyZXNzID0gImxvY2FsaG9zdDoxMjM0NSIKOkwKBW11bHRpEkNbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBhZGRyZXNzID0gImxvY2FsaG9zdDoxMjM0NSIKOnUKA2drZRJucmVnaW9ucyA9IFsidXMtd2VzdDEiXQoKW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgcHVibGljX2hvc3RuYW1lID0gIm9ubGluZWJvdXRpcXVlLmV4YW1wbGUuY29tIgoSOWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jdXJyZW5jeXNlcnZpY2UvVBo9CjlnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvY3VycmVuY3lzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
+        image: ricardocgm/weaver-onlineboutique:a696bf07
         imagePullPolicy: IfNotPresent
         name: serviceweaver
         ports:
@@ -450,7 +523,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: onlineboutique-hpa-ique-currencyservice-t-e2196232-2feeb3b6
+  name: onlineboutique-hpa-ique-currencyservice-t-a696bf07-cff12f4a
   namespace: default
 spec:
   maxReplicas: 10
@@ -465,80 +538,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: onlineboutique-lineboutique-currencyservice-t-e2196232-d96f0ffd
-status:
-  currentMetrics: null
-  desiredReplicas: 0
-
----
-
-# Deployment for replica set github.com/ServiceWeaver/onlineboutique/productcatalogservice/T
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  creationTimestamp: null
-  name: onlineboutique-utique-productcatalogservice-t-e2196232-52a4c551
-  namespace: default
-spec:
-  minReadySeconds: 5
-  revisionHistoryLimit: 1
-  selector:
-    matchLabels:
-      depName: onlineboutique-utique-productcatalogservice-t-e2196232-52a4c551
-  strategy:
-    rollingUpdate: {}
-    type: RollingUpdate
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        appName: onlineboutique
-        depName: onlineboutique-utique-productcatalogservice-t-e2196232-52a4c551
-        metrics: onlineboutique
-      namespace: default
-    spec:
-      containers:
-      - args:
-        - babysitter
-        env:
-        - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSP2dpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9wcm9kdWN0Y2F0YWxvZ3NlcnZpY2UvVBpDCj9naXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvcHJvZHVjdGNhdGFsb2dzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
-        image: ricardocgm/weaver-onlineboutique:e2196232
-        imagePullPolicy: IfNotPresent
-        name: serviceweaver
-        ports:
-        - containerPort: 9090
-        resources:
-          requests:
-            cpu: 100m
-            memory: 128Mi
-        stdin: true
-        tty: true
-status: {}
-
----
-
-# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/productcatalogservice/T
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
-metadata:
-  creationTimestamp: null
-  name: onlineboutique-hpa-roductcatalogservice-t-e2196232-832b3476
-  namespace: default
-spec:
-  maxReplicas: 10
-  metrics:
-  - resource:
-      name: cpu
-      target:
-        averageUtilization: 80
-        type: Utilization
-    type: Resource
-  minReplicas: 1
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: onlineboutique-utique-productcatalogservice-t-e2196232-52a4c551
+    name: onlineboutique-lineboutique-currencyservice-t-a696bf07-b72d3c0a
 status:
   currentMetrics: null
   desiredReplicas: 0
@@ -550,14 +550,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: onlineboutique-lineboutique-shippingservice-t-e2196232-0b15c563
+  name: onlineboutique-lineboutique-shippingservice-t-a696bf07-d5df007d
   namespace: default
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      depName: onlineboutique-lineboutique-shippingservice-t-e2196232-0b15c563
+      depName: onlineboutique-lineboutique-shippingservice-t-a696bf07-d5df007d
   strategy:
     rollingUpdate: {}
     type: RollingUpdate
@@ -566,7 +566,7 @@ spec:
       creationTimestamp: null
       labels:
         appName: onlineboutique
-        depName: onlineboutique-lineboutique-shippingservice-t-e2196232-0b15c563
+        depName: onlineboutique-lineboutique-shippingservice-t-a696bf07-d5df007d
         metrics: onlineboutique
       namespace: default
     spec:
@@ -575,8 +575,8 @@ spec:
         - babysitter
         env:
         - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSOWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9zaGlwcGluZ3NlcnZpY2UvVBo9CjlnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvc2hpcHBpbmdzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
-        image: ricardocgm/weaver-onlineboutique:e2196232
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgo6aQoEa3ViZRJhaW1hZ2UgPSAicmljYXJkb2NnbS93ZWF2ZXItb25saW5lYm91dGlxdWUiCgpbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBwdWJsaWMgPSB0cnVlCjpNCgZzaW5nbGUSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1Igo6TAoFbXVsdGkSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1IgoSOWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9zaGlwcGluZ3NlcnZpY2UvVBo9CjlnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvc2hpcHBpbmdzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
+        image: ricardocgm/weaver-onlineboutique:a696bf07
         imagePullPolicy: IfNotPresent
         name: serviceweaver
         ports:
@@ -596,7 +596,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: onlineboutique-hpa-ique-shippingservice-t-e2196232-8353eaf0
+  name: onlineboutique-hpa-ique-shippingservice-t-a696bf07-1b4e006e
   namespace: default
 spec:
   maxReplicas: 10
@@ -611,7 +611,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: onlineboutique-lineboutique-shippingservice-t-e2196232-0b15c563
+    name: onlineboutique-lineboutique-shippingservice-t-a696bf07-d5df007d
 status:
   currentMetrics: null
   desiredReplicas: 0
@@ -639,7 +639,7 @@ spec:
       creationTimestamp: null
       labels:
         appName: onlineboutique
-        depName: onlineboutique-com-serviceweaver-weaver-main-e2196232-17096ac6
+        depName: onlineboutique-com-serviceweaver-weaver-main-a696bf07-16d41b1d
         globalName: onlineboutique-github-com-serviceweaver-weaver-main-dfbca204
         metrics: onlineboutique
       namespace: default
@@ -649,8 +649,8 @@ spec:
         - babysitter
         env:
         - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDo8Cg1zZXJ2aWNld2VhdmVyEitiaW5hcnkgPSAiLi9vbmxpbmVib3V0aXF1ZSIKcm9sbG91dCA9ICI1bSIKOmkKBGt1YmUSYWltYWdlID0gInJpY2FyZG9jZ20vd2VhdmVyLW9ubGluZWJvdXRpcXVlIgoKW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgcHVibGljID0gdHJ1ZQo6TQoGc2luZ2xlEkNbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBhZGRyZXNzID0gImxvY2FsaG9zdDoxMjM0NSIKOkwKBW11bHRpEkNbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBhZGRyZXNzID0gImxvY2FsaG9zdDoxMjM0NSIKOnUKA2drZRJucmVnaW9ucyA9IFsidXMtd2VzdDEiXQoKW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgcHVibGljX2hvc3RuYW1lID0gIm9ubGluZWJvdXRpcXVlLmV4YW1wbGUuY29tIgoSJGdpdGh1Yi5jb20vU2VydmljZVdlYXZlci93ZWF2ZXIvTWFpbho6CiRnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvd2VhdmVyL01haW4SEgoQCghib3V0aXF1ZRCgnAEYASCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
-        image: ricardocgm/weaver-onlineboutique:e2196232
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDpNCgZzaW5nbGUSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1Igo6TAoFbXVsdGkSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1Igo6dQoDZ2tlEm5yZWdpb25zID0gWyJ1cy13ZXN0MSJdCgpbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBwdWJsaWNfaG9zdG5hbWUgPSAib25saW5lYm91dGlxdWUuZXhhbXBsZS5jb20iCjo8Cg1zZXJ2aWNld2VhdmVyEitiaW5hcnkgPSAiLi9vbmxpbmVib3V0aXF1ZSIKcm9sbG91dCA9ICI1bSIKOmkKBGt1YmUSYWltYWdlID0gInJpY2FyZG9jZ20vd2VhdmVyLW9ubGluZWJvdXRpcXVlIgoKW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgcHVibGljID0gdHJ1ZQoSJGdpdGh1Yi5jb20vU2VydmljZVdlYXZlci93ZWF2ZXIvTWFpbho6CiRnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvd2VhdmVyL01haW4SEgoQCghib3V0aXF1ZRCgnAEYASCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
+        image: ricardocgm/weaver-onlineboutique:a696bf07
         imagePullPolicy: IfNotPresent
         name: serviceweaver
         ports:
@@ -670,7 +670,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: onlineboutique-hpa-viceweaver-weaver-main-e2196232-c0d7808b
+  name: onlineboutique-hpa-viceweaver-weaver-main-a696bf07-03cadaf0
   namespace: default
 spec:
   maxReplicas: 10
@@ -714,165 +714,19 @@ status:
 
 ---
 
-# Deployment for replica set github.com/ServiceWeaver/onlineboutique/cartservice/T
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  creationTimestamp: null
-  name: onlineboutique-r-onlineboutique-cartservice-t-e2196232-573a4fd8
-  namespace: default
-spec:
-  minReadySeconds: 5
-  revisionHistoryLimit: 1
-  selector:
-    matchLabels:
-      depName: onlineboutique-r-onlineboutique-cartservice-t-e2196232-573a4fd8
-  strategy:
-    rollingUpdate: {}
-    type: RollingUpdate
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        appName: onlineboutique
-        depName: onlineboutique-r-onlineboutique-cartservice-t-e2196232-573a4fd8
-        metrics: onlineboutique
-      namespace: default
-    spec:
-      containers:
-      - args:
-        - babysitter
-        env:
-        - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSNWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jYXJ0c2VydmljZS9UGjkKNWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jYXJ0c2VydmljZS9UEgAgkE4qB2RlZmF1bHQyNmh0dHA6Ly9vbmxpbmVib3V0aXF1ZS1qYWVnZXItMjg4YmNhMzk6MTQyNjgvYXBpL3RyYWNlcw==
-        image: ricardocgm/weaver-onlineboutique:e2196232
-        imagePullPolicy: IfNotPresent
-        name: serviceweaver
-        ports:
-        - containerPort: 9090
-        resources:
-          requests:
-            cpu: 100m
-            memory: 128Mi
-        stdin: true
-        tty: true
-status: {}
-
----
-
-# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/cartservice/T
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
-metadata:
-  creationTimestamp: null
-  name: onlineboutique-hpa-boutique-cartservice-t-e2196232-f2ffec9a
-  namespace: default
-spec:
-  maxReplicas: 10
-  metrics:
-  - resource:
-      name: cpu
-      target:
-        averageUtilization: 80
-        type: Utilization
-    type: Resource
-  minReplicas: 1
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: onlineboutique-r-onlineboutique-cartservice-t-e2196232-573a4fd8
-status:
-  currentMetrics: null
-  desiredReplicas: 0
-
----
-
-# Deployment for replica set github.com/ServiceWeaver/onlineboutique/paymentservice/T
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  creationTimestamp: null
-  name: onlineboutique-nlineboutique-paymentservice-t-e2196232-9fbe4f3c
-  namespace: default
-spec:
-  minReadySeconds: 5
-  revisionHistoryLimit: 1
-  selector:
-    matchLabels:
-      depName: onlineboutique-nlineboutique-paymentservice-t-e2196232-9fbe4f3c
-  strategy:
-    rollingUpdate: {}
-    type: RollingUpdate
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        appName: onlineboutique
-        depName: onlineboutique-nlineboutique-paymentservice-t-e2196232-9fbe4f3c
-        metrics: onlineboutique
-      namespace: default
-    spec:
-      containers:
-      - args:
-        - babysitter
-        env:
-        - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgo6aQoEa3ViZRJhaW1hZ2UgPSAicmljYXJkb2NnbS93ZWF2ZXItb25saW5lYm91dGlxdWUiCgpbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBwdWJsaWMgPSB0cnVlCjpNCgZzaW5nbGUSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1Igo6TAoFbXVsdGkSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1IgoSOGdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9wYXltZW50c2VydmljZS9UGjwKOGdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9wYXltZW50c2VydmljZS9UEgAgkE4qB2RlZmF1bHQyNmh0dHA6Ly9vbmxpbmVib3V0aXF1ZS1qYWVnZXItMjg4YmNhMzk6MTQyNjgvYXBpL3RyYWNlcw==
-        image: ricardocgm/weaver-onlineboutique:e2196232
-        imagePullPolicy: IfNotPresent
-        name: serviceweaver
-        ports:
-        - containerPort: 9090
-        resources:
-          requests:
-            cpu: 100m
-            memory: 128Mi
-        stdin: true
-        tty: true
-status: {}
-
----
-
-# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/paymentservice/T
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
-metadata:
-  creationTimestamp: null
-  name: onlineboutique-hpa-tique-paymentservice-t-e2196232-1ea40f99
-  namespace: default
-spec:
-  maxReplicas: 10
-  metrics:
-  - resource:
-      name: cpu
-      target:
-        averageUtilization: 80
-        type: Utilization
-    type: Resource
-  minReplicas: 1
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: onlineboutique-nlineboutique-paymentservice-t-e2196232-9fbe4f3c
-status:
-  currentMetrics: null
-  desiredReplicas: 0
-
----
-
 # Deployment for replica set github.com/ServiceWeaver/onlineboutique/adservice/T
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: onlineboutique-ver-onlineboutique-adservice-t-e2196232-c9b3e804
+  name: onlineboutique-ver-onlineboutique-adservice-t-a696bf07-5c3f6c5f
   namespace: default
 spec:
   minReadySeconds: 5
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      depName: onlineboutique-ver-onlineboutique-adservice-t-e2196232-c9b3e804
+      depName: onlineboutique-ver-onlineboutique-adservice-t-a696bf07-5c3f6c5f
   strategy:
     rollingUpdate: {}
     type: RollingUpdate
@@ -881,7 +735,7 @@ spec:
       creationTimestamp: null
       labels:
         appName: onlineboutique
-        depName: onlineboutique-ver-onlineboutique-adservice-t-e2196232-c9b3e804
+        depName: onlineboutique-ver-onlineboutique-adservice-t-a696bf07-5c3f6c5f
         metrics: onlineboutique
       namespace: default
     spec:
@@ -890,8 +744,8 @@ spec:
         - babysitter
         env:
         - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
-          value: CpUECiRlMjE5NjIzMi1kMzlhLTQzMmQtOTUyOS0zYzI4YTE3MWU5OWIS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgo6aQoEa3ViZRJhaW1hZ2UgPSAicmljYXJkb2NnbS93ZWF2ZXItb25saW5lYm91dGlxdWUiCgpbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBwdWJsaWMgPSB0cnVlCjpNCgZzaW5nbGUSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1IgoSM2dpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9hZHNlcnZpY2UvVBo3CjNnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvYWRzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
-        image: ricardocgm/weaver-onlineboutique:e2196232
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgo6aQoEa3ViZRJhaW1hZ2UgPSAicmljYXJkb2NnbS93ZWF2ZXItb25saW5lYm91dGlxdWUiCgpbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBwdWJsaWMgPSB0cnVlCjpNCgZzaW5nbGUSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1Igo6TAoFbXVsdGkSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1IgoSM2dpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9hZHNlcnZpY2UvVBo3CjNnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvYWRzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
+        image: ricardocgm/weaver-onlineboutique:a696bf07
         imagePullPolicy: IfNotPresent
         name: serviceweaver
         ports:
@@ -911,7 +765,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: onlineboutique-hpa-neboutique-adservice-t-e2196232-43a1c262
+  name: onlineboutique-hpa-neboutique-adservice-t-a696bf07-f6161dc9
   namespace: default
 spec:
   maxReplicas: 10
@@ -926,7 +780,153 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: onlineboutique-ver-onlineboutique-adservice-t-e2196232-c9b3e804
+    name: onlineboutique-ver-onlineboutique-adservice-t-a696bf07-5c3f6c5f
+status:
+  currentMetrics: null
+  desiredReplicas: 0
+
+---
+
+# Deployment for replica set github.com/ServiceWeaver/onlineboutique/productcatalogservice/T
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: onlineboutique-utique-productcatalogservice-t-a696bf07-8c99f3c9
+  namespace: default
+spec:
+  minReadySeconds: 5
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      depName: onlineboutique-utique-productcatalogservice-t-a696bf07-8c99f3c9
+  strategy:
+    rollingUpdate: {}
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        appName: onlineboutique
+        depName: onlineboutique-utique-productcatalogservice-t-a696bf07-8c99f3c9
+        metrics: onlineboutique
+      namespace: default
+    spec:
+      containers:
+      - args:
+        - babysitter
+        env:
+        - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgo6aQoEa3ViZRJhaW1hZ2UgPSAicmljYXJkb2NnbS93ZWF2ZXItb25saW5lYm91dGlxdWUiCgpbbGlzdGVuZXJzXQogIFtsaXN0ZW5lcnMuYm91dGlxdWVdCiAgICBwdWJsaWMgPSB0cnVlCjpNCgZzaW5nbGUSQ1tsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIGFkZHJlc3MgPSAibG9jYWxob3N0OjEyMzQ1IgoSP2dpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9wcm9kdWN0Y2F0YWxvZ3NlcnZpY2UvVBpDCj9naXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvcHJvZHVjdGNhdGFsb2dzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
+        image: ricardocgm/weaver-onlineboutique:a696bf07
+        imagePullPolicy: IfNotPresent
+        name: serviceweaver
+        ports:
+        - containerPort: 9090
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        stdin: true
+        tty: true
+status: {}
+
+---
+
+# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/productcatalogservice/T
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  creationTimestamp: null
+  name: onlineboutique-hpa-roductcatalogservice-t-a696bf07-032bf197
+  namespace: default
+spec:
+  maxReplicas: 10
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: onlineboutique-utique-productcatalogservice-t-a696bf07-8c99f3c9
+status:
+  currentMetrics: null
+  desiredReplicas: 0
+
+---
+
+# Deployment for replica set github.com/ServiceWeaver/onlineboutique/checkoutservice/T
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: onlineboutique-lineboutique-checkoutservice-t-a696bf07-16d888c4
+  namespace: default
+spec:
+  minReadySeconds: 5
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      depName: onlineboutique-lineboutique-checkoutservice-t-a696bf07-16d888c4
+  strategy:
+    rollingUpdate: {}
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        appName: onlineboutique
+        depName: onlineboutique-lineboutique-checkoutservice-t-a696bf07-16d888c4
+        metrics: onlineboutique
+      namespace: default
+    spec:
+      containers:
+      - args:
+        - babysitter
+        env:
+        - name: SERVICEWEAVER_DEPLOYMENT_CONFIG
+          value: CpUECiRhNjk2YmYwNy0wMjlmLTQ3ODgtOThkOS1kNTdmY2UzZDQ2YjAS7AMKDm9ubGluZWJvdXRpcXVlEhYvd2VhdmVyL29ubGluZWJvdXRpcXVlMIDwksvdCDppCgRrdWJlEmFpbWFnZSA9ICJyaWNhcmRvY2dtL3dlYXZlci1vbmxpbmVib3V0aXF1ZSIKCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpYyA9IHRydWUKOk0KBnNpbmdsZRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjpMCgVtdWx0aRJDW2xpc3RlbmVyc10KICBbbGlzdGVuZXJzLmJvdXRpcXVlXQogICAgYWRkcmVzcyA9ICJsb2NhbGhvc3Q6MTIzNDUiCjp1CgNna2USbnJlZ2lvbnMgPSBbInVzLXdlc3QxIl0KCltsaXN0ZW5lcnNdCiAgW2xpc3RlbmVycy5ib3V0aXF1ZV0KICAgIHB1YmxpY19ob3N0bmFtZSA9ICJvbmxpbmVib3V0aXF1ZS5leGFtcGxlLmNvbSIKOjwKDXNlcnZpY2V3ZWF2ZXISK2JpbmFyeSA9ICIuL29ubGluZWJvdXRpcXVlIgpyb2xsb3V0ID0gIjVtIgoSOWdpdGh1Yi5jb20vU2VydmljZVdlYXZlci9vbmxpbmVib3V0aXF1ZS9jaGVja291dHNlcnZpY2UvVBo9CjlnaXRodWIuY29tL1NlcnZpY2VXZWF2ZXIvb25saW5lYm91dGlxdWUvY2hlY2tvdXRzZXJ2aWNlL1QSACCQTioHZGVmYXVsdDI2aHR0cDovL29ubGluZWJvdXRpcXVlLWphZWdlci0yODhiY2EzOToxNDI2OC9hcGkvdHJhY2Vz
+        image: ricardocgm/weaver-onlineboutique:a696bf07
+        imagePullPolicy: IfNotPresent
+        name: serviceweaver
+        ports:
+        - containerPort: 9090
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        stdin: true
+        tty: true
+status: {}
+
+---
+
+# Autoscaler for replica set github.com/ServiceWeaver/onlineboutique/checkoutservice/T
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  creationTimestamp: null
+  name: onlineboutique-hpa-ique-checkoutservice-t-a696bf07-8b7caddc
+  namespace: default
+spec:
+  maxReplicas: 10
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: onlineboutique-lineboutique-checkoutservice-t-a696bf07-16d888c4
 status:
   currentMetrics: null
   desiredReplicas: 0
@@ -1108,7 +1108,7 @@ data:
 
     schema_config:
       configs:
-        - from: 2023-11-01  # Marks the starting point of this schema
+        - from: 2023-11-06  # Marks the starting point of this schema
           store: boltdb-shipper
           object_store: filesystem
           schema: v11

@@ -120,13 +120,16 @@ func (fe *Server) homeHandler(w http.ResponseWriter, r *http.Request) {
 func (fe *Server) getImageHandler(w http.ResponseWriter, r *http.Request) {
   _, productID := filepath.Split(r.URL.Path)
 	logger := r.Context().Value(ctxKeyLogger{}).(*slog.Logger)
-  logger.Debug("Buscando produto" + productID)
 
+  // logger.Debug("Buscando produto no imageservice: " + productID)
+  // start := time.Now()
   image, err := fe.imageservice.Get().GetProductImage(r.Context(), productID)
+  // logger.Debug("Tempo de busca: " + time.Since(start).String())
 
   if err != nil {
     logger.Error("erro ao buscar imagem do produto!")
     w.WriteHeader(404)
+    w.Write([]byte("erro ao buscar imagem do produto!"))
   }
 
   w.Header().Add("Content-Type", "image/png")

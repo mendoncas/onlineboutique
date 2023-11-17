@@ -31,7 +31,6 @@ import (
 	"github.com/ServiceWeaver/weaver"
 	"github.com/ServiceWeaver/onlineboutique/frontend"
 )
-
 //go:generate ../../cmd/weaver/weaver generate ./...
 
 func main() {

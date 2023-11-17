@@ -2,14 +2,18 @@ package imageservice
 
 import (
 	"context"
-	"os"
-
+  "embed"
 	"github.com/ServiceWeaver/weaver"
 )
 
 type T interface {
   GetProductImage(ctx context.Context, productId string) ([]byte, error)
 }
+
+var (
+	//go:embed images/*
+	staticFS embed.FS
+)
 
 type impl struct {
   weaver.Implements[T]
@@ -28,8 +32,7 @@ func (s *impl) GetProductImage (ctx context.Context, productid string) ([]byte, 
     return image, nil
   }
 
-  image, err := os.ReadFile("./imageservice/images/" + productid)
-  if err != nil {
+  image, err := staticFS.ReadFile("images/"+productid); if err != nil {
     s.Logger(ctx).Error("Falha ao carregar imagem: " + productid)
     s.Logger(ctx).Error(err.Error())
     return nil, err

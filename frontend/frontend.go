@@ -139,14 +139,16 @@ func Serve(ctx context.Context, s *Server) error {
 	const post = http.MethodPost
 	const head = http.MethodHead
 	r.Handle("/", instrument("home", s.homeHandler, []string{get, head}))
-  r.Handle("/image/", instrument("image", s.getImageHandler, []string{get}))
+  r.Handle("/imageservice/", instrument("image", s.getImageHandler, []string{get}))
 	r.Handle("/product/", instrument("product", s.productHandler, []string{get, head}))
 	r.Handle("/cart", instrument("cart", s.cartHandler, []string{get, head, post}))
 	r.Handle("/cart/empty", instrument("cart_empty", s.emptyCartHandler, []string{post}))
 	r.Handle("/setCurrency", instrument("setcurrency", s.setCurrencyHandler, []string{post}))
 	r.Handle("/logout", instrument("logout", s.logoutHandler, []string{get}))
 	r.Handle("/cart/checkout", instrument("cart_checkout", s.placeOrderHandler, []string{post}))
-	r.Handle("/static/", weaver.InstrumentHandler("static", http.StripPrefix("/static/", http.FileServer(http.FS(staticHTML)))))
+
+	r.Handle("/static", weaver.InstrumentHandler("static", http.StripPrefix("/static/", http.FileServer(http.FS(staticHTML)))))
+
 	r.Handle("/robots.txt", instrument("robots", func(w http.ResponseWriter, _ *http.Request) { fmt.Fprint(w, "User-agent: *\nDisallow: /") }, nil))
 	r.HandleFunc(weaver.HealthzURL, weaver.HealthzHandler)
 
